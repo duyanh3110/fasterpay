@@ -1,0 +1,26 @@
+import React from "react";
+import Country from "./Country";
+import Setting from "./Setting";
+import "./header.scss";
+
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="left">
+        <img
+          className="logo"
+          alt="Faster Pay"
+          src={process.env.PUBLIC_URL + "assets/fp-logo-light.svg"}
+        />
+        <Country />
+      </div>
+      <div className="right">
+        <Setting image="assets/user-icon.svg" label="Logout" />
+        <Setting image="assets/language.svg" label="Eng" />
+        <Setting image="assets/help.svg" />
+      </div>
+    </div>
+  );
+};
+
+export default Header;

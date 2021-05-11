@@ -1,0 +1,62 @@
+.header {
+  background-color: #111052;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+
+  .left {
+    display: flex;
+
+    .logo {
+      width: 167px;
+      margin-right: 24px;
+    }
+
+    .country {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 23.02px;
+        margin-right: 9px;
+      }
+
+      .label {
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+
+    .setting {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 25px;
+        margin-right: 9px;
+      }
+
+      .label {
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 22px;
+      }
+
+      &:last-child {
+        img {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
