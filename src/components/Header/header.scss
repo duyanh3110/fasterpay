@@ -15,19 +15,66 @@
     }
 
     .country {
-      display: flex;
-      align-items: center;
+      position: relative;
 
-      img {
-        width: 23.02px;
-        margin-right: 9px;
+      .default {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          width: 23.02px;
+          margin-right: 9px;
+        }
+
+        .label {
+          color: #ffffff;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+        }
       }
 
-      .label {
-        color: #ffffff;
+      .list {
+        position: absolute;
+        background-color: #ffffff;
+        z-index: 1;
+        width: 230px;
+        border: 1px solid #0000001a;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         font-family: "Montserrat", sans-serif;
-        font-size: 14px;
-        font-weight: 600;
+
+        &.hidden {
+          display: none;
+        }
+
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          margin: 15px 0px 15px 17px;
+        }
+
+        .countries {
+          .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+            padding-left: 17px;
+
+            img {
+              width: 28px;
+            }
+
+            .name {
+              margin-left: 11px;
+              font-size: 12px;
+              font-weight: 500;
+              color: #79919c;
+            }
+          }
+        }
       }
     }
   }
