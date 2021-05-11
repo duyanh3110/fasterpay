@@ -1,11 +1,11 @@
 import React from "react";
 import PaymentMethodList from "./PaymentMethodList";
 
-const PaymentMethod = () => {
+const PaymentMethod = ({ countryCode }) => {
   return (
     <div className="payment-method">
       <div className="title">Choose payment methods</div>
-      <PaymentMethodList />
+      {countryCode ? <PaymentMethodList countryCode={countryCode} /> : null}
     </div>
   );
 };

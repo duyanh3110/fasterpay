@@ -3,7 +3,7 @@ import Country from "./Country";
 import Setting from "./Setting";
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ getDefaultCountry }) => {
   return (
     <div className="header">
       <div className="left">
@@ -12,7 +12,7 @@ const Header = () => {
           alt="Faster Pay"
           src={process.env.PUBLIC_URL + "assets/fp-logo-light.svg"}
         />
-        <Country />
+        <Country getDefaultCode={getDefaultCountry} />
       </div>
       <div className="right">
         <Setting image="assets/user-icon.svg" label="Logout" />

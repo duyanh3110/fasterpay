@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Payment from "./components/Payment/Payment";
-import Transaction from "./components/Payment/Transaction";
-import Route from "./components/Route";
 import "./App.scss";
 
 const App = () => {
+  const [countryCode, setCountryCode] = useState("");
+
+  const getDefaultCountry = (code) => {
+    setCountryCode(code);
+  };
+
   return (
     <div className="widget">
-      <Header />
-      <Route path="/">
-        <Payment />
-      </Route>
-      <Route path="/transaction">
-        <Transaction />
-      </Route>
+      <Header getDefaultCountry={getDefaultCountry} />
+      <Payment countryCode={countryCode} />
       <Footer />
     </div>
   );

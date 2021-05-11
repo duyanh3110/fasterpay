@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CountryList from "./CountryList";
 import axios from "axios";
 
-const Country = () => {
+const Country = ({ getDefaultCode }) => {
   const [selected, setSelected] = useState({});
   const [hideDropdown, setHideDropdown] = useState(true);
 
@@ -36,6 +36,10 @@ const Country = () => {
 
     getDefaultCountry();
   }, []);
+
+  useEffect(() => {
+    getDefaultCode(selected.country_code);
+  }, [selected]);
 
   return (
     <div className="country">

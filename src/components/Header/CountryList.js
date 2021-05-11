@@ -4,7 +4,7 @@ const CountryList = ({ onSelect, toggleDropDown }) => {
   const items = [
     {
       name: "United Kingdom",
-      country_code: "UK",
+      country_code: "GB",
       image: process.env.PUBLIC_URL + "assets/uk.svg",
     },
     {

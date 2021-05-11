@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const PaymentMethodList = () => {
+const PaymentMethodList = ({ countryCode }) => {
   const [paymentMethod, setPaymentMethod] = useState([]);
   const [select, setSelect] = useState(0);
 
@@ -13,7 +13,7 @@ const PaymentMethodList = () => {
         {
           params: {
             key: "d66e8a3b6cb457a242329cbfb98f60f3",
-            country_code: "FI",
+            country_code: countryCode,
           },
         }
       );
@@ -22,7 +22,7 @@ const PaymentMethodList = () => {
     };
 
     getPaymentMethod();
-  }, []);
+  }, [countryCode]);
 
   const renderedItem = paymentMethod.map((item, index) => {
     return (
