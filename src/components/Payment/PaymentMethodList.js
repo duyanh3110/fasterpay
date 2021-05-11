@@ -3,7 +3,7 @@ import axios from "axios";
 
 const PaymentMethodList = () => {
   const [paymentMethod, setPaymentMethod] = useState([]);
-  const [select, setSelect] = useState("");
+  const [select, setSelect] = useState(0);
 
   useEffect(() => {
     const getPaymentMethod = async () => {

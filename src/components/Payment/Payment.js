@@ -2,6 +2,7 @@ import React from "react";
 import Order from "./Order";
 import PaymentInfo from "./PaymentInfo";
 import PaymentMethod from "./PaymentMethod";
+import Card from "./Card";
 import "./payment.scss";
 
 const Payment = () => {
@@ -10,6 +11,7 @@ const Payment = () => {
       <div className="payment">
         <PaymentInfo />
         <PaymentMethod />
+        <Card />
       </div>
       <Order />
     </div>

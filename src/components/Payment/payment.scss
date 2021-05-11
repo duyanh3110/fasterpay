@@ -77,6 +77,7 @@
       .list {
         margin-top: 17px;
         display: flex;
+        min-height: 101px;
 
         .item {
           margin: 0 8px;
@@ -114,6 +115,190 @@
 
           &:last-child {
             margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .card {
+      font-family: "Montserrat", sans-serif;
+      color: #070c11;
+      margin-top: 17px;
+
+      .title {
+        margin-bottom: 17px;
+        font-size: 21px;
+        font-weight: 600;
+      }
+
+      .form {
+        .item {
+          margin: 25px 0;
+        }
+
+        .row {
+          display: flex;
+
+          .col {
+            width: 30%;
+
+            .input {
+              width: 90%;
+            }
+
+            &:last-child {
+              margin-left: 6%;
+
+              .input {
+                width: 80%;
+              }
+            }
+          }
+        }
+
+        .input {
+          width: 60%;
+          height: 52px;
+          padding-left: 16px;
+          font-size: 16px;
+          font-weight: 400;
+          border-radius: 5px;
+          border: 1px solid #c8d4ea;
+
+          ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #68879a;
+            opacity: 1; /* Firefox */
+          }
+
+          :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #68879a;
+          }
+
+          ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #68879a;
+          }
+
+          &.default {
+            border-color: #c8d4ea;
+          }
+
+          &.valid {
+            border-color: #23c5ac;
+          }
+
+          &.invalid {
+            border-color: #ff0000;
+
+            ::placeholder {
+              /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: #ff0000;
+              opacity: 1; /* Firefox */
+            }
+
+            :-ms-input-placeholder {
+              /* Internet Explorer 10-11 */
+              color: #ff0000;
+            }
+
+            ::-ms-input-placeholder {
+              /* Microsoft Edge */
+              color: #ff0000;
+            }
+          }
+        }
+
+        .action {
+          .pay {
+            cursor: pointer;
+            width: 63%;
+            height: 50px;
+            background-color: #2af5d6;
+            border: 1px solid #2af5d6;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+
+            &:disabled {
+              color: #9c9ea0;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+
+      .term {
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    &-success {
+      text-align: center;
+      margin-top: 57px;
+      font-family: "Montserrat", sans-serif;
+      color: #070c11;
+
+      .title {
+        margin-top: 21px;
+        margin-bottom: 28px;
+        font-size: 21px;
+        font-weight: 600;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        width: 412px;
+        margin: 0px auto 13px auto;
+
+        &.account {
+          border-top: 1px solid #070c11;
+          padding-top: 13px;
+        }
+
+        .text {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .action {
+        margin-top: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .download {
+          width: 346px;
+          height: 50px;
+          text-align: center;
+          background-color: #2af5d6;
+          border: 1px solid #2af5d6;
+          border-radius: 5px;
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          cursor: pointer;
+        }
+
+        .link {
+          color: #1169ff;
+          font-size: 12px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        .question {
+          margin-top: 85px;
+          font-size: 12px;
+          font-weight: 400;
+
+          a {
+            color: #070c11;
           }
         }
       }
