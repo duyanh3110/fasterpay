@@ -2,4 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+const WidgetDivs = document.querySelectorAll(".payment_widget");
+
+// Inject our React App into each
+WidgetDivs.forEach((Div) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App domElement={Div} />
+    </React.StrictMode>,
+    Div
+  );
+});

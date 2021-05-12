@@ -1,6 +1,6 @@
 import React from "react";
 
-const Order = () => {
+const Order = ({ amount }) => {
   return (
     <div className="order">
       <div className="title">Order FP1763415-9</div>
@@ -10,7 +10,7 @@ const Order = () => {
       <div className="price">
         <div className="row">
           <div>Amount</div>
-          <div>45.00 EUR</div>
+          <div>{amount}</div>
         </div>
         <div className="row">
           <div>Taxes</div>
@@ -19,7 +19,7 @@ const Order = () => {
       </div>
       <div className="total">
         <div className="label">Total amount</div>
-        <div>45.00 EUR</div>
+        <div>{amount}</div>
       </div>
       <div className="scan">
         <div className="label">Pay with the FasterPay app</div>

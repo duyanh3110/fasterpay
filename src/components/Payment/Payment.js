@@ -6,7 +6,7 @@ import Card from "./Card";
 import SuccessPayment from "./SuccessPayment";
 import "./payment.scss";
 
-const Payment = ({ countryCode }) => {
+const Payment = ({ countryCode, amount }) => {
   const [success, setSuccess] = useState(false);
 
   return (
@@ -19,6 +19,7 @@ const Payment = ({ countryCode }) => {
           <React.Fragment>
             <PaymentMethod countryCode={countryCode} />
             <Card
+              amount={amount}
               setSuccess={() => {
                 setSuccess(!success);
               }}
@@ -26,7 +27,7 @@ const Payment = ({ countryCode }) => {
           </React.Fragment>
         )}
       </div>
-      <Order />
+      <Order amount={amount} />
     </div>
   );
 };

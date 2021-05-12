@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Input from "./Input";
 
-const Card = ({ setSuccess }) => {
+const Card = ({ setSuccess, amount }) => {
   const [nameValid, setNameValid] = useState(false);
   const [numberValid, setNumberValid] = useState(false);
   const [expiryValid, setExpiryValid] = useState(false);
@@ -68,7 +68,7 @@ const Card = ({ setSuccess }) => {
         </div>
         <div className="action">
           <button className="pay" onClick={setSuccess} disabled={isDisabled}>
-            Pay 45.00 EUR
+            Pay {amount}
           </button>
         </div>
       </div>
