@@ -133,7 +133,7 @@
 
       .form {
         .item {
-          margin: 25px 0;
+          margin: 10px 0;
         }
 
         .row {
@@ -207,6 +207,19 @@
               /* Microsoft Edge */
               color: #ff0000;
             }
+          }
+        }
+
+        .error {
+          font-size: 12px;
+          height: 15px;
+
+          &.show {
+            color: #ff0000;
+          }
+
+          &.hide {
+            color: #ffffff;
           }
         }
 

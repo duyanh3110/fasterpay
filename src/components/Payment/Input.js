@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Input = ({ type, name, placeholder, checkValid }) => {
   const [valid, setValid] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const onInputChange = ({ target }) => {
     if (target.value && target.value.length > 0) {
@@ -14,6 +15,7 @@ const Input = ({ type, name, placeholder, checkValid }) => {
         } else {
           setValid(false);
           checkValid(name, false);
+          setErrorMessage("Invalid name");
         }
       } else if (name === "number") {
         // Add space to number
@@ -51,6 +53,7 @@ const Input = ({ type, name, placeholder, checkValid }) => {
         } else {
           setValid(false);
           checkValid(name, false);
+          setErrorMessage("Invalid card number");
         }
       } else if (name === "expiry") {
         // Remove digit from input
@@ -73,6 +76,7 @@ const Input = ({ type, name, placeholder, checkValid }) => {
         } else {
           setValid(false);
           checkValid(name, false);
+          setErrorMessage("Invalid date");
         }
       } else if (name === "cvv") {
         const clearValue = clearDigit(target.value);
@@ -83,6 +87,7 @@ const Input = ({ type, name, placeholder, checkValid }) => {
         } else {
           setValid(false);
           checkValid(name, false);
+          setErrorMessage("Invalid code");
         }
       }
     } else {
@@ -95,15 +100,20 @@ const Input = ({ type, name, placeholder, checkValid }) => {
   };
 
   return (
-    <input
-      className={`input ${
-        valid === "" ? "default" : valid ? "valid" : "invalid"
-      }`}
-      type={type}
-      placeholder={placeholder}
-      required
-      onChange={(e) => onInputChange(e)}
-    />
+    <React.Fragment>
+      <input
+        className={`input ${
+          valid === "" ? "default" : valid ? "valid" : "invalid"
+        }`}
+        type={type}
+        placeholder={placeholder}
+        required
+        onChange={(e) => onInputChange(e)}
+      />
+      <div className={`error ${valid === "" || valid ? "hide" : "show"}`}>
+        {errorMessage}
+      </div>
+    </React.Fragment>
   );
 };
 
