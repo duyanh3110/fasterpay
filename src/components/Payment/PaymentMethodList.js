@@ -11,6 +11,7 @@ const PaymentMethodList = ({ countryCode }) => {
         "https://api.paymentwall.com/api/payment-systems/",
         {},
         {
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
           params: {
             key: "d66e8a3b6cb457a242329cbfb98f60f3",
             country_code: countryCode,

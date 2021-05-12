@@ -20,6 +20,7 @@ const Country = ({ getDefaultCode }) => {
         "https://api.paymentwall.com/api/rest/country",
         {},
         {
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
           params: {
             key: "d66e8a3b6cb457a242329cbfb98f60f3",
             uid: "duyanh19962012@gmail.com",
