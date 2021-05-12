@@ -5,7 +5,7 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
   .payment {
-    width: 665px;
+    width: 70%;
     padding: 20px 26px 0px 24px;
 
     &-info {
@@ -322,7 +322,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     color: #070c11;
-    width: 230px;
+    width: 30%;
     border-left: 1px solid #0000001f;
     padding: 19px 27px 16px 26px;
     box-shadow: rgba(17, 12, 46, 0.15) -7px 0px 100px 0px;
@@ -386,6 +386,187 @@
         font-size: 12px;
         font-weight: 600;
         color: #1e41ff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+
+    .payment {
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      &-info {
+        flex-direction: column;
+
+        .title {
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+
+        .game {
+          margin-top: 10px;
+          margin-left: 0px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          .company {
+            flex-direction: column;
+            align-items: center;
+
+            .name {
+              margin: 10px 0px;
+            }
+
+            .verify {
+              margin-left: 0px;
+            }
+          }
+
+          .rating {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 80%;
+              margin: 10px 0;
+            }
+
+            .text {
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+
+      &-method {
+        .title {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .list {
+          width: 100%;
+          overflow-x: scroll;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .item {
+            &:first-child {
+              padding-left: 5%;
+            }
+            &:last-child {
+              padding-right: 5%;
+            }
+          }
+        }
+      }
+
+      .card {
+        .title {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .form {
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px;
+
+            .input {
+              width: 80%;
+            }
+          }
+
+          .row {
+            .col {
+              width: 100%;
+              text-align: center;
+
+              .input {
+                width: 80%;
+              }
+
+              &:last-child {
+                margin-left: 0px;
+                margin-top: 0px;
+              }
+            }
+
+            &.item {
+              margin: 0;
+            }
+          }
+
+          .action {
+            text-align: center;
+          }
+        }
+
+        .term {
+          text-align: center;
+        }
+      }
+
+      &-success {
+        margin-top: 15px;
+
+        .title {
+          font-size: 16px;
+          margin: 10px 0px;
+        }
+
+        .info {
+          width: 90%;
+        }
+
+        .action {
+          .download {
+            width: 80%;
+          }
+
+          .question {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .order {
+      width: 100%;
+      margin-top: 10px;
+      border-left: 0px;
+      padding: 0;
+      text-align: center;
+
+      .info {
+        width: 90%;
+        margin: auto;
+      }
+
+      .price {
+        width: 90%;
+        margin: auto;
+      }
+
+      .total {
+        text-align: center;
+      }
+
+      .scan {
+        margin-top: 50px;
+        margin-bottom: 10px;
       }
     }
   }
