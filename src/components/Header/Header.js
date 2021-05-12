@@ -10,7 +10,7 @@ const Header = ({ getDefaultCountry }) => {
         <img
           className="logo"
           alt="Faster Pay"
-          src={process.env.PUBLIC_URL + "assets/fp-logo-light.svg"}
+          src={process.env.PUBLIC_URL + "/assets/fp-logo-light.svg"}
         />
         <Country getDefaultCode={getDefaultCountry} />
       </div>

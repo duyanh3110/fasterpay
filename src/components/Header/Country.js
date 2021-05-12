@@ -30,7 +30,7 @@ const Country = ({ getDefaultCode }) => {
       setSelected({
         name: data.country,
         country_code: data.code,
-        image: "assets/fi.svg",
+        image: process.env.PUBLIC_URL + "/assets/fi.svg",
       });
     };
 
@@ -44,10 +44,7 @@ const Country = ({ getDefaultCode }) => {
   return (
     <div className="country">
       <div className="default" onClick={() => setHideDropdown(!hideDropdown)}>
-        <img
-          alt={selected.country_code}
-          src={process.env.PUBLIC_URL + selected.image}
-        />
+        <img alt={selected.country_code} src={selected.image} />
         <p className="label">{selected.name}</p>
       </div>
       {!hideDropdown ? (

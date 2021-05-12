@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="secure">
         <img
           alt="secure"
-          src={process.env.PUBLIC_URL + "assets/secure-logo.svg"}
+          src={process.env.PUBLIC_URL + "/assets/secure-logo.svg"}
         />
       </div>
     </div>
