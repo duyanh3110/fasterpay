@@ -18,7 +18,7 @@ const SuccessPayment = () => {
       </div>
       <div className="action">
         <button className="download">Download receipt</button>
-        <a href="/" className="link">
+        <a href="/fasterpay" className="link">
           Back to merchant
         </a>
         <div className="question">
