@@ -92,6 +92,9 @@ const Input = ({ type, name, placeholder, checkValid }) => {
       }
     } else {
       setValid(false);
+      if (name === "name") {
+        setErrorMessage("Invalid name");
+      }
     }
   };
 
