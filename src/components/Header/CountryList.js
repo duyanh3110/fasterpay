@@ -5,22 +5,22 @@ const CountryList = ({ onSelect, toggleDropDown }) => {
     {
       name: "United Kingdom",
       country_code: "GB",
-      image: process.env.PUBLIC_URL + "/assets/uk.svg",
+      image: "https://duyanh3110.github.io/fasterpay/assets/uk.svg",
     },
     {
       name: "Germany",
       country_code: "DE",
-      image: process.env.PUBLIC_URL + "/assets/de.svg",
+      image: "https://duyanh3110.github.io/fasterpay/assets/de.svg",
     },
     {
       name: "Argentina",
       country_code: "AR",
-      image: process.env.PUBLIC_URL + "/assets/ar.svg",
+      image: "https://duyanh3110.github.io/fasterpay/assets/ar.svg",
     },
     {
       name: "Finland",
       country_code: "FI",
-      image: process.env.PUBLIC_URL + "/assets/fi.svg",
+      image: "https://duyanh3110.github.io/fasterpay/assets/fi.svg",
     },
   ];
 

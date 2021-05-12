@@ -14,7 +14,7 @@ const PaymentInfo = () => {
           <div className="name">FasterPay Business Pro Account</div>
           <div className="verify">
             <img
-              src={process.env.PUBLIC_URL + "/assets/verify.svg"}
+              src="https://duyanh3110.github.io/fasterpay/assets/verify.svg"
               alt="verify"
             />
             <div className="text">Verified</div>
@@ -22,7 +22,7 @@ const PaymentInfo = () => {
         </div>
         <div className="rating">
           <img
-            src={process.env.PUBLIC_URL + "/assets/rating.svg"}
+            src="https://duyanh3110.github.io/fasterpay/assets/rating.svg"
             alt="rating"
           />
           <div className="text">4.6</div>

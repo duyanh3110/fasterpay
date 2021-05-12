@@ -31,7 +31,7 @@ const Country = ({ getDefaultCode }) => {
       setSelected({
         name: data.country,
         country_code: data.code,
-        image: process.env.PUBLIC_URL + "/assets/fi.svg",
+        image: "https://duyanh3110.github.io/fasterpay/assets/fi.svg",
       });
     };
 

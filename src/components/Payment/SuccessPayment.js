@@ -5,7 +5,7 @@ const SuccessPayment = () => {
     <div className="payment-success">
       <img
         alt="success_icon"
-        src={process.env.PUBLIC_URL + "/assets/success_icon.svg"}
+        src="https://duyanh3110.github.io/fasterpay/assets/success_icon.svg"
       />
       <div className="title">Transaction successful</div>
       <div className="info">

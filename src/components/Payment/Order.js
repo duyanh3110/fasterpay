@@ -25,7 +25,7 @@ const Order = () => {
         <div className="label">Pay with the FasterPay app</div>
         <img
           alt="qr code"
-          src={process.env.PUBLIC_URL + "/assets/qr-code.svg"}
+          src="https://duyanh3110.github.io/fasterpay/assets/qr-code.svg"
         />
         <div className="instruction">QR Payment instruction</div>
       </div>
