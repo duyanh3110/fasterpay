@@ -8,7 +8,7 @@ const Input = ({ type, name, placeholder, checkValid }) => {
     if (target.value && target.value.length > 0) {
       if (name === "name") {
         // Validate input character only
-        let regEx = /^[a-z][a-z\s]*$/;
+        let regEx = /^[ a-zA-Z\-\’]+$/;
         if (target.value.match(regEx)) {
           setValid(true);
           checkValid(name, true);
