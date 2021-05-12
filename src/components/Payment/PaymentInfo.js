@@ -4,7 +4,10 @@ const PaymentInfo = () => {
   return (
     <div className="payment-info">
       <div className="title">Pay to</div>
-      <img src={process.env.PUBLIC_URL + "/assets/pubg-logo.svg"} alt="pubg" />
+      <img
+        src="https://duyanh3110.github.io/fasterpay/assets/pubg-logo.svg"
+        alt="pubg"
+      />
       <div className="game">
         <div className="name">PlayerUnknown's Battlegrounds</div>
         <div className="company">
