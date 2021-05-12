@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Order from "./Order";
 import PaymentInfo from "./PaymentInfo";
 import PaymentMethod from "./PaymentMethod";
 import Card from "./Card";
 import SuccessPayment from "./SuccessPayment";
-import Route from "../Route";
 import "./payment.scss";
 
 const Payment = ({ countryCode }) => {
+  const [success, setSuccess] = useState(false);
+
   return (
     <div className="content">
       <div className="payment">
         <PaymentInfo />
-        <Route path="/">
-          <PaymentMethod countryCode={countryCode} />
-          <Card />
-        </Route>
-        <Route path="/transaction">
+        {success ? (
           <SuccessPayment />
-        </Route>
+        ) : (
+          <React.Fragment>
+            <PaymentMethod countryCode={countryCode} />
+            <Card
+              setSuccess={() => {
+                setSuccess(!success);
+              }}
+            />
+          </React.Fragment>
+        )}
       </div>
       <Order />
     </div>
